@@ -1,0 +1,538 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+/* 头部 */
+.w {
+    width: 100%;
+}
+
+.public-top {
+    font-family: Arial, 宋体;
+    width: 100%;
+    line-height: 20px;
+    color: rgb(119, 119, 119);
+    background-color: rgb(250, 250, 250);
+    border-bottom: 1px solid rgb(240, 240, 240);
+}
+.public-top .topbar{
+     height: 30px;
+     width: 1200px;
+     margin: auto;
+}
+.public-top .user-entry{
+    width: 50%;
+    height: 20px;
+    float: left;
+    padding: 5px 0;
+}
+.public-top .user-entry a{
+    color: #333333;
+}
+.public-top .quick-menu{
+    font-size: 0;
+    *word-spacing: -1px;
+    text-align: right;
+    width: 50%;
+    height: 30px;
+    float: right;
+}
+.public-top .quick-menu a{
+    color: #777 !important;
+}
+.public-top .quick-menu dl{
+    text-align: left;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    *display: inline;
+    width: 80px;
+    height: 30px;
+    position: relative;
+    z-index: 999;
+    *zoom: 1;
+}
+.public-top .quick-menu dl dt{
+    font-size: 12px;
+    line-height: 20px;
+    height: 20px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 12px;
+}
+.public-top .quick-menu dl dt i{
+    /* background: url(../imges/top_bg.png) no-repeat 0 0; */
+    vertical-align: middle;
+    display: inline-block;
+    width: 6px;
+    height: 3px;
+    margin-left: 6px;
+    transition: .2s ease-in;
+}
+.public-top .quick-menu dl dt dd{
+    background-color: #FFF;
+    display: none;
+    width: 78px;
+    border: solid 1px #F0F0F0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+/* 搜索栏 */
+.header-wrap {
+    background-color: #FFF;
+    width: 100%;
+    padding: 19px 0;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: auto;
+    height: 100px;
+}
+.public-head-layout .site-logo {
+    width: 240px;
+    height: 60px;
+    float: left;
+    margin: 15px 10px auto 0;
+}
+.head-search-layout {
+    width: 440px;
+    float: left;
+    margin: 19px 0 21px 30px;
+}
+.head-search-bar {
+    width: 100%;
+    height: 40px;
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+.head-search-bar .search {
+    width: 600px;
+    height: 42px;
+}
+.head-search-bar .searchTxt {
+    float: left;
+    width: 500px;
+    height: 38px;
+    border: 1px solid #cccccc;
+    border-right: 0;
+    position: relative;
+    z-index: 20;
+    background: #fff;
+}
+.head-search-bar .searchTxt .searchMenu {
+    float: left;
+}
+.head-search-bar .searchTxt .searchMenu .searchSelected {
+    color: #999;
+    cursor: pointer;
+    font-size: 14px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0px 0px 0px 16px;
+    width: 56px;
+    border-right: #ccc solid 1px;
+}
+.head-search-bar .searchMenu .down {
+    position: absolute;
+    top: 6px;
+    left: 42px;
+    /* background: url(../imges/top_bg.png) no-repeat; */
+    height: 5px;
+    width: 9px;
+    margin: 12px 0px 0px 10px;
+}
+.head-search-bar .searchTxt .searchMenu .searchTab {
+    display: none;
+    position: absolute;
+    top: 34px;
+    left: -1px;
+    width: 72px;
+    border: 1px solid #cccccc;
+    border-top: 0;
+    background: #fff;
+    height: auto;
+    z-index: 20;
+    border-right: 1px solid #cccccc;
+}
+.head-search-bar .searchTxt .searchMenu .searchTab li {
+    width: 72px;
+    height: 36px;
+    line-height: 36px;
+    color: #999;
+    font-size: 14px;
+    text-indent: 16px;
+    cursor: pointer;
+}
+.head-search-bar .searchTxt input {
+    float: left;
+    border: 0;
+    background: #fff;
+    color: #999999;
+    width: 300px;
+    height: 30px;
+    margin: 0;
+    outline: medium none;
+    padding: 4px 0px 4px 16px;
+}
+.head-search-bar .searchBtn {
+    float: left;
+}
+.head-search-bar .searchBtn button {
+    background-color: #ef3c79;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    font-size: 14px;
+    height: 40px;
+    width: 84px;
+}
+.head-search-bar .search-tip {
+    font-size: 0;
+    word-spacing: -1em;
+    background-color: #FFF;
+    display: none;
+    min-height: 100px;
+    padding-bottom: 10px;
+    border: solid 1px #D7D7D7;
+    position: absolute;
+    z-index: 1;
+    top: 39px;
+    left: 0;
+    right: 72px;
+}
+.head-search-bar .search-history {
+    min-height: 100px;
+    width: 55%;
+    border-right: solid 1px #E6E6E6;
+}
+.head-search-bar .search-tip .title {
+    color: #999;
+    line-height: 20px;
+    padding: 5px 19px;
+}
+.head-search-bar .search-tip .title a {
+    float: right;
+}
+.head-search-bar .search-history ul {
+    display: block;
+}
+.head-search-bar .search-hot {
+    width: 44%;
+}
+.head-search-bar .search-hot ul {
+    font-size: 0;
+    *word-spacing: -1px;
+}
+.head-search-layout .keyword {
+    line-height: 20px;
+    white-space: nowrap;
+    width: 100%;
+    height: 20px;
+    margin-top: 6px;
+    overflow: hidden;
+}
+.head-search-layout .keyword ul {
+    font-size: 0;
+    *word-spacing: -1px;
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+}
+.head-search-layout .keyword ul li {
+    font-size: 12px;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    *display: inline;
+    margin-right: 12px;
+}
+.head-user-menu {
+    font-size: 0;
+    *word-spacing: -1px;
+    float: right;
+    margin: 18px 0 0 0;
+}
+.head-user-menu dl {
+    font-size: 12px;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    *display: inline;
+    margin-left: 10px;
+    position: relative;
+    z-index: 3;
+    *zoom: 1;
+}
+.head-user-menu dl dt {
+    line-height: 20px;
+    color: #555;
+    background-color: #FAFAFA;
+    height: 20px;
+    padding: 10px;
+    border: solid 1px #F0F0F0;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.head-user-menu dl dt span.ico {
+    /* background: url(../imges/top_bg.png) no-repeat; */
+    vertical-align: middle;
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+}
+
+
+.head-user-menu dl.my-mall {
+    width: 108px;
+}
+.head-user-menu dl.my-mall dt {
+    width: 90px;
+}
+.head-user-menu dl.my-mall span.ico {
+    background-position: -100px 0;
+    margin-right: 4px;
+}
+.head-user-menu dl dt i {
+    font-size: 0px;
+    line-height: 0;
+    vertical-align: middle;
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    margin-left: 8px;
+    border-width: 4px;
+    border-color: #777 transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+    -webkit-transition: .2s ease-in;
+    -moz-transition: -webkit-transform .2s ease-in;
+    -o-transition: -webkit-transform .2s ease-in;
+    transition: .2s ease-in;
+}
+.head-user-menu dl.my-mall dd {
+    width: 308px;
+}
+.head-user-menu dl dd .sub-title {
+    line-height: 28px;
+    height: 28px;
+    padding: 7px;
+    border-bottom: solid 1px #DDD;
+}
+.head-user-menu dl dd .sub-title h4 {
+    font-weight: 600;
+    float: left;
+}
+.head-user-menu dl dd .sub-title a {
+    float: right;
+}
+.head-user-menu dl dd .user-centent-menu {
+    width: 308px;
+    padding: 8px 0;
+    overflow: hidden;
+}
+.head-user-menu dl dd .user-centent-menu ul {
+    width: 310px;
+    margin-left: -2px;
+}
+.head-user-menu dl dd .user-centent-menu ul li {
+    width: 138px;
+    float: left;
+    padding: 4px 0 4px 16px;
+    border-left: solid 1px #EEE;
+}
+.head-user-menu dl dd .browse-history {
+    background-color: #FAFAFA;
+    width: 308px;
+    border-style: solid;
+    border-width: 1px 0 0;
+    border-color: #DDD transparent transparent;
+}
+.head-user-menu dl dd .browse-history .part-title {
+    height: 20px;
+    padding: 6px 8px;
+}
+.head-user-menu dl dd .browse-history .part-title h4 {
+    float: left;
+}
+.head-user-menu dl dd .browse-history ul {
+    font-size: 0;
+    *word-spacing: -1px;
+    padding: 0 7px 7px 7px;
+}
+.head-user-menu dl dd .browse-history ul li {
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    *display: inline;
+    margin: 0 4px;
+    *zoom: 1;
+}
+.head-user-menu dl dd .goods-thumb a {
+    line-height: 0;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    *display: block;
+    width: 48px;
+    height: 48px;
+    border: solid 1px #DDD;
+    overflow: hidden;
+}
+.head-user-menu dl.my-cart {
+    width: 124px;
+}
+.head-user-menu dl.my-cart dt {
+    width: 106px;
+}
+.head-user-menu dl.my-cart span.ico {
+    background-position: -120px 0;
+    margin-right: 8px;
+}
+.head-user-menu dl dt span.ico {
+    /* background: url(../imges/top_bg.png) no-repeat; */
+    vertical-align: middle;
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+}
+.head-user-menu dl.my-cart dd {
+    width: 348px;
+}
+.head-user-menu dl dd .sub-title {
+    line-height: 28px;
+    height: 28px;
+    padding: 7px;
+    border-bottom: solid 1px #DDD;
+}
+.head-user-menu dl dd .sub-title h4 {
+    font-weight: 600;
+    float: left;
+}
+.head-user-menu dl dd .incart-goods-box {
+    display: block;
+    width: 348px;
+    max-height: 267px;
+    overflow: hidden;
+    position: relative;
+}
+.head-user-menu dl dd .incart-goods {
+    text-align: center;
+    width: 100%;
+}
+.head-user-menu dl dd .incart-goods .no-order {
+    margin: 20px 0;
+}
+.head-user-menu dl dd .checkout {
+    background-color: #F0F0F0;
+    text-align: right;
+    padding: 8px;
+    overflow: hidden;
+}
+.head-user-menu dl dd .checkout .total-price {
+    line-height: 20px;
+    display: block;
+}
+.head-user-menu dl dd .checkout .btn-cart {
+    float: right;
+    clear: both;
+    line-height: 20px;
+    color: #FFF;
+    background-color: #EF3C79;
+    padding: 4px 8px;
+    margin-top: 4px;
+    border-radius: 4px;
+}
+
+/* 例表部分 */
+.public-nav-layout {
+    width: 100%;
+    height: 36px;
+    border-bottom: solid 2px #EF3C79;
+    margin: 0 auto;
+    position: relative;
+    z-index: 99;
+    zoom: 1;
+}
+.public-nav-layout .wrapper {
+    width: 1200px;
+    margin: auto;
+}
+
+.public-nav-layout  .wrapper .all-category {
+    background-color: #EF3C79;
+    display: block;
+    width: 212px;
+    height: 36px;
+    float: left;
+}
+.public-nav-layout .wrapper .all-category .category {
+    display: none;
+    width: 212px;
+    position: relative;
+}
+.public-nav-layout .wrapper .all-category .category .menu {
+    border-top: solid 1px #EF3C79;
+}
+.public-nav-layout .wrapper .all-category .title {
+    line-height: 20px;
+    height: 20px;
+    padding: 8px 10px 10px 10px;
+}
+.public-nav-layout .wrapper .all-category .title i {
+    font-size: 0px;
+    line-height: 0;
+    /* background: url(../imges/top_bg.png) no-repeat -182px -186px; */
+    width: 18px;
+    height: 14px;
+    float: left;
+    margin: 4px 4px 0 0;
+}
+.public-nav-layout .wrapper .all-category .title h3 a {
+    font-size: 14px;
+    font-weight: normal;
+    color: #FFF;
+    float: left;
+    margin-left: 4px;
+}
+.public-nav-layout .wrapper .site-menu {
+    font-size: 0;
+    *word-spacing: -1px;
+    white-space: nowrap;
+    max-width: 988px;
+    float: left;
+    overflow: hidden;
+}
+.public-nav-layout .wrapper .site-menu li {
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+.public-nav-layout .wrapper .site-menu li a {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #444;
+    height: 20px;
+    padding: 8px 24px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}

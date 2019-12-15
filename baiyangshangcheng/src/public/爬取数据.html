@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 选项卡导航栏数据扒取 -->
+    <script>
+        var arr = [];
+        var lis = document.querySelector(".menu").children;
+        for (var i = 0, len = lis.length; i < len; i++) {
+            var o = {};
+            o.left = [];
+            o.left.push(lis[i].querySelector("h4").innerText);
+            o.right = {};
+            o.right["title1"] = [];
+            Array.from(lis[i].querySelectorAll(".recommend-class span")).forEach(function (ele) { o.right["title1"].push(ele.innerText) });
+            o.right["title2"] = [];
+            Array.from(lis[i].querySelectorAll(".sub-class-content h3")).forEach(function (ele) { o.right["title2"].push(ele.innerText) });
+            o.right["con"] = [];
+            Array.from(lis[i].querySelectorAll(".sub-class-content a")).forEach(function (ele) { o.right["con"].push(ele.innerText) });
+            arr.push(o);
+        }
+        console.log(JSON.stringify(arr));
+    </script>
+
+    <!-- 内容区 -->
+    <script>
+        var arr = [];
+        var o = {};
+        var imgs1 = document.querySelectorAll(".home_gg_pc_ul img");
+        o.imgs = [];
+        Array.from(imgs1).forEach(function (ele) { o.imgs.push(ele.src); });
+        o.partTwo = [];
+        var two = {};
+        two.title = [];
+        var partTwo = document.querySelector(".home_hot_head").children;
+        Array.from(partTwo).forEach(function (ele) { two.title.push(ele.innerText) });
+        o.partTwo.push(two);
+        lisA = [];
+        var lis = document.querySelector(".home_hotbd").children;
+        for (var i = 6; i <= 10; i++) {
+            lisli = {};
+            lisli.img = lis[i].querySelector(".swiper-slide-img img").src;
+            lisli.title = lis[i].querySelector(".swiper-slide-des a").innerText;
+            lisli.price = lis[i].querySelector(".swiper-slide-des span").innerText;
+            lisli.buy = lis[i].querySelector(".swiper-slide-buy a").innerText;
+            lisA.push(lisli);
+        }
+        o.partTwo.push(lisA);
+        arr.push(o);
+        var mains = document.querySelectorAll(".home_floor_pc");
+        for (var j = 0; j < mains.length; j++) {
+            var b = {};
+            b.title = mains[j].querySelector(".home_yy_head h3").innerText;
+            b.titlelis = [];
+            Array.from(mains[j].querySelectorAll(".home_pc_crumbs a")).forEach(function (ele) {
+                b.titlelis.push(ele.innerText);
+            });
+            b.imgBig = mains[j].querySelector(".home_yy_img img").src;
+            b.imgSmall = [];
+            Array.from(mains[j].querySelectorAll(".home_yy_goodslist img")).forEach(function (ele) {
+                b.imgSmall.push(ele.src);
+            });
+            arr.push(b);
+        }
+        var c = [];
+        JSON.stringify(arr);
+    </script>
+
+    <!-- 轮播图+最后两张图 -->
+    <script>
+        var arr = [];
+        var lastTitle = document.querySelector(".home_lchead_pc").children;
+        var a = {};
+        a.title = [];
+        Array.from(lastTitle).forEach(function (ele) {
+            a.title.push(ele.innerText);
+        })
+        arr.push(a);
+        var list = document.querySelector(".home_recommend_slide").children;
+
+        for (var i = 0; i < list.length; i++) {
+            var b = {};
+            b.img = list[i].querySelector(".swiper-slide-img img").src;
+            b.title = list[i].querySelector(".swiper-slide-des a").innerText;
+            b.j = list[i].querySelector(".swiper-slide-des em").innerText;
+            b.price = list[i].querySelector(".swiper-slide-des span").innerText;
+            b.del = list[i].querySelector(".swiper-slide-des i").innerText;
+            arr.push(b);
+        }
+        var c = {};
+        c.img = [];
+        c.img.push(document.querySelector(".mt10 img").src);
+        c.img.push(document.querySelector(".baozhang_img img").src);
+        arr.push(c)
+        JSON.stringify(arr);
+
+    </script>
+</body>
+
+</html>
