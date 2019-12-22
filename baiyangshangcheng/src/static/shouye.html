@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>百洋商城</title>
+    <title>百洋商城首页</title>
     <link rel="stylesheet" href="../html/css/base.css">
     <link rel="stylesheet" href="../html/css/home_header.css">
+    <link rel="stylesheet" href="../html/css/index-main.css">
+    <link rel="stylesheet" href="../html/css/swiper.css">
     <script src="../html/js/jquery-3.4.1.js"></script>
-    <script src="../html/js/Manager.js"></script>
-    <script src="../html/js/Cookie.js"></script>
+    <!-- <script src="../html/js/Manager.js"></script> -->
+    <!-- <script src="../html/js/mains.js"></script> -->
+    <!-- <script src="../html/js/lastlis.js"></script>-->
+    <!-- <script src="../html/js/Cookie.js"></script> -->
 </head>
 
 <body>
@@ -18,8 +22,7 @@
         <div class="nc-appbar-tabs" id="appBarTabs">
             <div class="ever">
                 <div class="cart"><a href="  " id="rtoolbar_cart"><span class="icon"></span> <span
-                            class="name">购物车</span><i id="rtoobar_cart_count" class="new_msg"
-                            style="display:none;"></i></a></div>
+                            class="name">购物车</span><i id="rtoobar_cart_count" class="new_msg">0</i></a></div>
                 <div class="chat"><a href="  " id="chat_show_user"><span class="icon"></span><i id="new_msg"
                             class="new_msg" style="display:none;"></i><span class="tit kefu">在线联系</span></a></div>
             </div>
@@ -27,7 +30,7 @@
                 <div class="middle">
                     <div class="user" nctype="a-barLoginBox">
                         <a href="  ">
-                            <div class="avatar"><img src=""></div>
+                            <div class="avatar"><img src="../html/imges/lg.jpg"></div>
                             <span class="tit">会员登录</span>
                         </a>
                     </div>
@@ -93,7 +96,7 @@
     <div class="public-top-layout w">
         <div class="topbar wrapper">
             <div class="user-entry">
-                您好，欢迎来到 <a href="http://127.0.0.1/code/baiyangshangcheng/src/public/" title="首页" alt="首页"
+                您好，欢迎来到 <a href="http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html" title="首页" alt="首页"
                     target="_blank">百洋健康</a> <span>[<a
                         href="http://127.0.0.1/code/baiyangshangcheng/src/html/login.html"
                         target="_blank">登录</a>]</span> <span>[<a
@@ -135,9 +138,10 @@
             </div>
         </div>
     </div>
+
     <div class="header-wrap">
         <header class="public-head-layout wrapper">
-            <h1 class="site-logo"><a href="http://127.0.0.1/code/baiyangshangcheng/src/public/"><img
+            <h1 class="site-logo"><a href="http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html"><img
                         src="http://127.0.0.1/code/baiyangshangcheng/src/html/imges/logo.png" class="pngFix"></a></h1>
             <div class="head-search-layout">
                 <div class="head-search-bar" id="head-search-bar">
@@ -242,6 +246,7 @@
             </div>
         </header>
     </div>
+
     <nav class="public-nav-layout ">
         <div class="wrapper">
             <div class="all-category">
@@ -250,21 +255,42 @@
                 </div>
                 <!-- 选项卡导航栏| -->
                 <div class="category">
+
+                    <!-- <ul class="menu">
+
+
+                    </ul> -->
+
                 </div>
             </div>
             <ul class="site-menu">
-                <li><a href="/" target="_blank">首页</a></li>
-                <li><a href="" target="_blank">维矿物质</a></li>
-                <li><a href="" target="_blank">营养补充</a></li>
-                <li><a href="" target="_blank">中西药品</a></li>
-                <li><a href="" target="_blank">知名美妆</a></li>
-                <li><a href="" target="_blank">免疫调节</a></li>
-                <li><a href="" target="_blank">庄园级橄榄油</a></li>
-                <li><a href="" target="_blank">有偿资讯</a></li>
+                <li><a href="http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html" target="_blank">首页</a></li>
+                <li><a href="http://127.0.0.1/code/baiyangshangcheng/src/static/goodlist.html" target="_blank">维矿物质</a>
+                </li>
+                <li><a href="#" target="_blank">营养补充</a></li>
+                <li><a href="#" target="_blank">中西药品</a></li>
+                <li><a href="#" target="_blank">知名美妆</a></li>
+                <li><a href="#" target="_blank">免疫调节</a></li>
+                <li><a href="#" target="_blank">庄园级橄榄油</a></li>
+                <li><a href="#" target="_blank">有偿资讯</a></li>
             </ul>
         </div>
     </nav>
-    <div class="nch-breadcrumb-layout"></div>
+    <div class="home_container_pc">
+        <div class="home_banner_img">
+            <div class="swiper-wrapper"></div>
+
+        </div>
+
+    </div>
+    </div>
+    <div class="home_main_pc">
+        <!-- imgF -->
+        <!-- mains -->
+        <!-- last -->
+
+
+    </div>
 
     <div id="cti">
         <div class="wrapper">
@@ -286,7 +312,7 @@
                         <div class="test_triangle_border popup_weibo">
                             <div class="popup ">
                                 <span><em></em></span>
-                                <img src="">
+                                <img src="../html/imges/weixin-qr.jpg">
                             </div>
                         </div>
                     </div>
@@ -295,7 +321,7 @@
                         <div class="test_triangle_border popup_weixin">
                             <div class="popup ">
                                 <span><em></em></span>
-                                <img src="">
+                                <img src="../html/imges/app-qr.jpg">
                             </div>
                         </div>
                     </div>
@@ -390,7 +416,72 @@
     </div>
 
 
+    <script>
+        $(".quick-menu").on("mouseenter", "dl", function () {
+            $(this).addClass("hover").siblings().removeClass("hover");
+        });
+        $(".quick-menu").on("mouseleave", "dl", function () {
+            $(this).removeClass("hover");
+        });
 
+        $(() => {
+            // console.log(cookie.get());
+            new Promise(function (resolve, reject) {
+                $.getScript("../html/js/Manager.js", function (script, textStatus, jqXHR) {
+                    resolve();
+                }).then(function () {
+                    $.getScript("../html/js/mains.js", function (script, textStatus, jqXHR) {
+                        resolve();
+                    }).then(function () {
+                        $.getScript("../html/js/lastlis.js", function (script, textStatus, jqXHR) {
+                            resolve();
+                        }).then(function () {
+                            $.getScript("../html/js/Cookie.js", function (script, textStatus, jqXHR) {
+                                // console.log(Cookie.get("phone"));
+                                if (Cookie.get("phone")) {
+                                    //当页面存在cookie的时候发送请求到后天获取该信息对应的ID
+                                    // 并且用cookie保存起来
+                                    $.ajax({
+                                        type: "get",
+                                        url: "../api/getuserIdA.php",
+                                        data: `phone=${Cookie.get("phone")}`,
+                                        dataType: "json",
+                                        success: function (data) {
+                                            Cookie.set("id", data[0].id);
+                                        }
+                                    });
+                                    $(".user-entry").html(`您好，${Cookie.get("phone")}，欢迎来到 <a href="http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html" title="首页" alt="首页" target="_blank">百洋健康</a> <a class='TC'>退出</a></span>`);
+                                }
+                                else if (Cookie.get("username")) {
+                                    //当页面存在cookie的时候发送请求到后天获取该信息对应的ID
+                                    // 并且用cookie保存起来
+                                    $.ajax({
+                                        type: "get",
+                                        url: "../api/getuserIdB.php",
+                                        data: `username=${Cookie.get("username")}`,
+                                        dataType: "json",
+                                        success: function (data) {
+                                            Cookie.set("id", data[0].id);
+                                        }
+                                    });
+
+                                    $(".user-entry").html(`您好，${Cookie.get("username")}，欢迎来到 <a href="http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html" title="首页" alt="首页" target="_blank">百洋健康</a> <a class='TC'>退出</a></span>`);
+                                }
+                                $('.TC').click(function () {
+                                    $(".user-entry").html(` 您好，欢迎来到 <a href="http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html" title="首页" alt="首页" target="_blank">百洋健康</a> <span><a href="http://127.0.0.1/code/baiyangshangcheng/src/html/login.html" target="_blank">登录</a></span> <span><a href="http://127.0.0.1/code/baiyangshangcheng/src/html/registered.html" target="_blank">注册</a></span>`);
+                                    Cookie.clear();
+                                })
+                            });
+                        })
+                    })
+                })
+            });
+
+
+        })
+
+
+    </script>
 </body>
 
 </html>

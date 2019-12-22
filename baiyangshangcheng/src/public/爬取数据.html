@@ -23,10 +23,31 @@
             o.right["title2"] = [];
             Array.from(lis[i].querySelectorAll(".sub-class-content h3")).forEach(function (ele) { o.right["title2"].push(ele.innerText) });
             o.right["con"] = [];
-            Array.from(lis[i].querySelectorAll(".sub-class-content a")).forEach(function (ele) { o.right["con"].push(ele.innerText) });
+
+            var conlist = lis[i].querySelectorAll(".goods-class");
+            for (var j = 0; j < conlist.length; j++) {
+                var cc = [];
+                for (var k = 0; k < conlist[j].children.length; k++) {
+                    cc.push(conlist[j].children[k].innerText)
+                }
+                o.right["con"].push(cc);
+
+            }
+
+
             arr.push(o);
         }
         console.log(JSON.stringify(arr));
+            // Array.from(conlist).forEach(function (ele) {
+            //     for (var j = 0; j < ele.length; j++) {
+            //         return Array.from(ele[j]).forEach(function (ele) {
+            //             console.log(ele);
+            //         })
+            //     }
+            // })
+
+            // Array.from(lis[i].querySelectorAll(".sub-class-content a")).forEach(function (ele) { o.right["con"].push(ele.innerText) });
+
     </script>
 
     <!-- 内容区 -->
@@ -44,7 +65,7 @@
         o.partTwo.push(two);
         lisA = [];
         var lis = document.querySelector(".home_hotbd").children;
-        for (var i = 6; i <= 10; i++) {
+        for (var i = 6; i <= 15; i++) {
             lisli = {};
             lisli.img = lis[i].querySelector(".swiper-slide-img img").src;
             lisli.title = lis[i].querySelector(".swiper-slide-des a").innerText;
@@ -97,9 +118,60 @@
         var c = {};
         c.img = [];
         c.img.push(document.querySelector(".mt10 img").src);
-        c.img.push(document.querySelector(".baozhang_img img").src);
+        // c.img.push(document.querySelector(".baozhang_img img").src);
         arr.push(c)
         JSON.stringify(arr);
+
+    </script>
+    <script>
+        // https://www.baiyangwang.com/cate-1-0-0-0-0-0-0-0-0-0.html 例表页面
+        // var arr = []; var o = {};
+        // var lis = document.querySelector(".list_pic").children;
+        // for (var i = 0; i < lis.length; i++) {
+
+        //     o.imgB = lis[i].querySelector(".goods-pic img").src;
+        //     o.title = lis[i].querySelector(".goods-name a").innerText;
+        //     o.priceA = lis[i].querySelector(".sale-price").innerText;
+        //     o.priceB = lis[i].querySelector(".market-price").innerText;
+        //     o.c = lis[i].querySelectorAll(".goods-cti img")[0].src;
+        //     o.t = lis[i].querySelectorAll(".goods-cti img")[1].src;
+        //     o.i = lis[i].querySelectorAll(".goods-cti img")[2].src;
+        //     o.db = lis[i].querySelector(".goods-compare").innerText;
+        //     o.sellcount = lis[i].querySelectorAll(".sell-stat li a")[0].innerText;
+        //     o.sell = lis[i].querySelectorAll(".sell-stat li p")[0].innerText;
+        //     o.pingcount = lis[i].querySelectorAll(".sell-stat li a")[1].innerText;
+        //     o.ping = lis[i].querySelectorAll(".sell-stat li p")[1].innerText;
+        //     o.store = lis[i].querySelector(".store a").innerText;
+        //     o.cart = lis[i].querySelector(".add-cart a").innerText;
+        //     arr.push(o);
+        // }
+        // console.log(arr);
+
+        var arr = [];
+        var o = {};
+        var lis = document.querySelectorAll(".goods-content");
+        for (var i = 0; i < lis.length; i++) {
+
+            o.title = lis[0].querySelector(".goods-name").innerText;
+            o.priceA = lis[0].querySelector(".sale-price").innerText;
+            o.priceB = lis[0].querySelector(".market-price").innerText;
+            o.c = lis[0].querySelectorAll(".goods-cti img")[0].src;
+            o.t = lis[0].querySelectorAll(".goods-cti img")[1].src;
+            o.i = lis[0].querySelectorAll(".goods-cti img")[2].src;
+            o.g1 = lis[0].querySelectorAll(".goods-pic-scroll-show img")[0].src;
+            o.g2 = lis[0].querySelectorAll(".goods-pic-scroll-show img")[1].src;
+            o.g3 = lis[0].querySelectorAll(".goods-pic-scroll-show img")[2].src;
+            o.g4 = lis[0].querySelectorAll(".goods-pic-scroll-show img")[3].src;
+            o.g5 = lis[0].querySelectorAll(".goods-pic-scroll-show img")[4].src;
+            o.sellcount = lis[0].querySelectorAll(".sell-stat li a")[0].innerText;
+            // o.sell = lis[0].querySelectorAll(".sell-stat li p")[0].innerText;
+            o.pingcount = lis[0].querySelectorAll(".sell-stat li a")[1].innerText;
+            // o.ping = lis[0].querySelectorAll(".sell-stat li p")[1].innerText;
+            o.store = lis[0].querySelector(".store a").innerText;
+
+            arr.push(o);
+        }
+        console.log(JSON.stringify(arr));
 
     </script>
 </body>

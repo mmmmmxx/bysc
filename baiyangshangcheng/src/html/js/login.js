@@ -43,9 +43,6 @@ $(() => {
             username = $("#user_name").val();
             phone = "";
         }
-
-
-
         if ($("#captcha").siblings().text().length == 0) {
             $.ajax({
                 type: "post",
@@ -60,10 +57,14 @@ $(() => {
                                 if ($(".checkbox").is(":checked") == true) {
                                     Cookie.set("username", username, 7);
                                     Cookie.set("password", password, 7)
-                                };
+                                } else {
+                                    Cookie.set("username", username, 0);
+                                    Cookie.set("password", password, 0)
+                                }
                                 setTimeout(() => {
-                                    window.location.href = "http://127.0.0.1/code/baiyangshangcheng/src/public/";
+                                    window.location.href = "http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html";
                                 }, 3000);
+
                             } else {
                                 alert("请输入正确的密码");
                             }
@@ -79,23 +80,21 @@ $(() => {
                                 if ($(".checkbox").is(":checked") == true) {
                                     Cookie.set("phone", phone, 7);
                                     Cookie.set("password", password, 7)
+                                } else {
+                                    Cookie.set("phone", phone, 0);
+                                    Cookie.set("password", password, 0)
                                 };
                                 setTimeout(() => {
-                                    window.location.href = "http://127.0.0.1/code/baiyangshangcheng/src/public/";
+                                    window.location.href = "http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html";
                                 }, 3000);
+
                             } else {
                                 alert("请输入正确的密码！");
                             }
                         } else {
                             alert(data.msg);
-
                         }
                     }
-
-
-
-
-
                 }
             });
         }

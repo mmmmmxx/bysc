@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>百洋商城</title>
+    <title>百洋商城列表页</title>
     <link rel="stylesheet" href="../html/css/base.css">
     <link rel="stylesheet" href="../html/css/home_header.css">
+    <link rel="stylesheet" href="../html/css/goodlist.css">
     <script src="../html/js/jquery-3.4.1.js"></script>
-    <script src="../html/js/Manager.js"></script>
-    <script src="../html/js/Cookie.js"></script>
 </head>
 
 <body>
@@ -18,8 +17,7 @@
         <div class="nc-appbar-tabs" id="appBarTabs">
             <div class="ever">
                 <div class="cart"><a href="  " id="rtoolbar_cart"><span class="icon"></span> <span
-                            class="name">购物车</span><i id="rtoobar_cart_count" class="new_msg"
-                            style="display:none;"></i></a></div>
+                            class="name">购物车</span><i id="rtoobar_cart_count" class="new_msg">0</i></a></div>
                 <div class="chat"><a href="  " id="chat_show_user"><span class="icon"></span><i id="new_msg"
                             class="new_msg" style="display:none;"></i><span class="tit kefu">在线联系</span></a></div>
             </div>
@@ -27,7 +25,7 @@
                 <div class="middle">
                     <div class="user" nctype="a-barLoginBox">
                         <a href="  ">
-                            <div class="avatar"><img src=""></div>
+                            <div class="avatar"><img src="../html/imges/lg.jpg"></div>
                             <span class="tit">会员登录</span>
                         </a>
                     </div>
@@ -93,7 +91,7 @@
     <div class="public-top-layout w">
         <div class="topbar wrapper">
             <div class="user-entry">
-                您好，欢迎来到 <a href="http://127.0.0.1/code/baiyangshangcheng/src/public/" title="首页" alt="首页"
+                您好，欢迎来到 <a href="http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html" title="首页" alt="首页"
                     target="_blank">百洋健康</a> <span>[<a
                         href="http://127.0.0.1/code/baiyangshangcheng/src/html/login.html"
                         target="_blank">登录</a>]</span> <span>[<a
@@ -137,7 +135,7 @@
     </div>
     <div class="header-wrap">
         <header class="public-head-layout wrapper">
-            <h1 class="site-logo"><a href="http://127.0.0.1/code/baiyangshangcheng/src/public/"><img
+            <h1 class="site-logo"><a href="http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html"><img
                         src="http://127.0.0.1/code/baiyangshangcheng/src/html/imges/logo.png" class="pngFix"></a></h1>
             <div class="head-search-layout">
                 <div class="head-search-bar" id="head-search-bar">
@@ -253,7 +251,7 @@
                 </div>
             </div>
             <ul class="site-menu">
-                <li><a href="/" target="_blank">首页</a></li>
+                <li><a href="http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html" target="_blank">首页</a></li>
                 <li><a href="" target="_blank">维矿物质</a></li>
                 <li><a href="" target="_blank">营养补充</a></li>
                 <li><a href="" target="_blank">中西药品</a></li>
@@ -264,8 +262,25 @@
             </ul>
         </div>
     </nav>
-    <div class="nch-breadcrumb-layout"></div>
+    <div class="nch-breadcrumb-layout">
+        <div class='nch-breadcrumb wrapper'>
+            <span><a>首页</a></span>
+            <span class="arrow">></span>
+            <span>微量元素<span>
+        </div>
+        <div class='bigbox'>
+            <div class='box'>
+                <strong>排序方式</strong>
+                <span class='typebtn' data-type='default'>默认</span>
+                <span class='typebtn' data-type='desc'>价格从高到低</span>
+                <span class='typebtn' data-type='asc'>价格从低到高</span>
 
+            </div>
+        </div>
+        <ul class='items'></ul>
+    </div>
+
+    <div id="page" class="page"></div>
     <div id="cti">
         <div class="wrapper">
             <div class="baozhang_img">
@@ -377,9 +392,8 @@
         </p>
 
         版权所有 2007-2018 青岛百洋健康药房连锁有限公司 百洋健康 <a target="_blank" href="">鲁ICP备09091598号</a> <a target="_blank"
-            href="https://b2cstatic.baiyangwang.com/shop/common/lADPDgQ9qcyZo-jNBlnNCIw_2188_1625.jpg">互联网药品信息服务资质证书编号
-            (鲁)-经营性-2017-0003</a> <a target="_blank"
-            href="https://shopncstaticimage.baiyangwang.com/ylqxxkz.jpg">医疗器械经营许可证</a> <a target="_blank" href="">
+            href="">互联网药品信息服务资质证书编号
+            (鲁)-经营性-2017-0003</a> <a target="_blank" href="">医疗器械经营许可证</a> <a target="_blank" href="">
             二类医疗器械备案凭证</a><br>
         <p>
             <a href="">
@@ -390,7 +404,39 @@
     </div>
 
 
+    <script>
+        $(() => {
+            new Promise(function (resolve, reject) {
+                $.getScript("../html/js/Manager.js", function (script, textStatus, jqXHR) {
+                    resolve();
+                }).then(function () {
+                    $.getScript("../html/js/glist.js", function (script, textStatus, jqXHR) {
+                        resolve();
+                    }).then(function () {
+                        $.getScript("../html/js/Cookie.js", function (script, textStatus, jqXHR) {
+                            if (Cookie.get("phone")) {
+                                $(".user-entry").html(`您好，${Cookie.get("phone")}，欢迎来到 <a href="http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html" title="首页" alt="首页" target="_blank">百洋健康</a> <a class='TC'>退出</a></span>`);
+                            }
+                            else if (Cookie.get("username")) {
+                                $(".user-entry").html(`您好，${Cookie.get("username")}，欢迎来到 <a href="http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html" title="首页" alt="首页" target="_blank">百洋健康</a> <a class='TC'>退出</a></span>`);
+                            }
+                            $('.TC').click(function () {
+                                $(".user-entry").html(` 您好，欢迎来到 <a href="http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html" title="首页" alt="首页" target="_blank">百洋健康</a> <span><a href="http://127.0.0.1/code/baiyangshangcheng/src/html/login.html" target="_blank">登录</a></span> <span><a href="http://127.0.0.1/code/baiyangshangcheng/src/html/registered.html" target="_blank">注册</a></span>`);
+                                Cookie.clear();
+                            })
 
+                        });
+                    })
+                })
+            });
+
+
+        })
+
+
+
+
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车页面</title>
+    <link rel="stylesheet" href="../html/css/base.css">
+    <link rel="stylesheet" href="../html/css/home_header.css">
+    <link rel="stylesheet" href="../html/css/cart.css">
+    <script src="../html/js/jquery-3.4.1.js"></script>
+    <script src="../html/js/cart.js"></script>
+    <script src="../html/js/Cookie.js"></script>
+</head>
+
+<body>
+    <div class="public-top-layout w">
+        <div class="topbar wrapper">
+            <div class="user-entry">
+                您好，欢迎来到 <a href="http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html" title="首页" alt="首页"
+                    target="_blank">百洋健康</a> <span>[<a
+                        href="http://127.0.0.1/code/baiyangshangcheng/src/html/login.html"
+                        target="_blank">登录</a>]</span> <span>[<a
+                        href="http://127.0.0.1/code/baiyangshangcheng/src/html/registered.html"
+                        target="_blank">注册</a>]</span>
+            </div>
+            <div class="quick-menu">
+                <dl class="">
+                    <dt><a href="" target="_blank">我的订单</a><i></i>
+                    </dt>
+                    <dd>
+                        <ul>
+                            <li><a href="" target="_blank">待付款订单</a></li>
+                            <li><a href="" target="_blank">待确认收货</a></li>
+                            <li><a href="" target="_blank">待评价交易</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="">
+                    <dt><a href="" target="_blank">我的收藏</a><i></i></dt>
+                    <dd>
+                        <ul>
+                            <li><a href="" target="_blank">商品收藏</a></li>
+                            <li><a href="" target="_blank">店铺收藏</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>客户服务<i></i></dt>
+                    <dd>
+                        <ul>
+                            <li><a href="" target="_blank">帮助中心</a></li>
+                            <li><a href="" target="_blank">售后服务</a></li>
+                            <li><a href="" target="_blank">客服中心</a></li>
+
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <header class="ncc-head-layout">
+        <div class="site-logo"><a href="https://www.baiyangwang.com"><img
+                    src="https://b2cstatic.baiyangwang.com/shop/common/logo.png" class="pngFix"></a></div>
+        <ul class="ncc-flow">
+            <li class="current">
+                <p>我的购物车</p>
+                <sub></sub>
+                <div class="hr"></div>
+            </li>
+            <li class="">
+                <p>确认结算</p>
+                <sub></sub>
+                <div class="hr"></div>
+            </li>
+            <li class="">
+                <p>支付提交</p>
+                <sub></sub>
+                <div class="hr"></div>
+            </li>
+            <li class="">
+                <p>订单完成</p>
+                <sub></sub>
+                <div class="hr"></div>
+            </li>
+        </ul>
+    </header>
+    <div class="ncc-title">
+        <h3>我的购物车</h3>
+        <h5>查看购物车商品清单，增加减少商品数量，并勾选想要的商品进入下一步操作。</h5>
+    </div>
+
+
+    <!-- 没有商品的时候显示该盒子 -->
+    <!-- <div class="ncc-null-shopping" style="display: none"><i class="ico"></i>
+        <h4>您的购物车还没有商品</h4>
+        <p><a href="../static/shouye.html" class="ncbtn mr10"><i class="icon-reply-all"></i>马上去购物</a> <a href="#"
+                class="ncbtn"><i class="icon-file-text"></i>查看自己的订单</a></p>
+    </div> -->
+
+    <!-- 有商品的时候显示该表单 -->
+    <form action="https://www.baiyangwang.com/index.php?act=buy&amp;op=buy_step1" method="POST" id="form_buy"
+        name="form_buy">
+        <table class="ncc-table-style">
+            <thead>
+                <tr>
+                    <th class="w50"><label>
+                            <input type="checkbox" checked="" value="1" id="selectAll"> 全选</label></th>
+                    <th></th>
+                    <th>商品</th>
+                    <th class="w150">单价(元)</th>
+                    <th class="w100">数量</th>
+                    <th class="w150">小计(元)</th>
+                    <th class="w80 tl">操作</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th colspan="20">
+                        <div class="ncc-store-name">店铺：<a
+                                href="https://www.baiyangwang.com/shop-1.html">百洋健康官方自营店</a><span member_id="1"></span>
+                        </div>
+                        <div class="ncc-store-sale"><span>免运费</span>满59免运费</div>
+                    </th>
+                </tr>
+                <tr id="cart_item_42992" class="shop-list shop-list-42992 ">
+                    <td class="td-border-left "><input type="checkbox" checked="" class="checkbox mt10"></td>
+                    <td class="w100"><a class="ncc-goods-thumb"><img
+                                src="https://static.baiyangwang.com/Uploads/Goods_pic/2016-03-30/800x800/56fb2b2e126dc_800x800.jpg"
+                                alt="花城 藿胆丸 36g 芳香化浊清热通窍用于鼻塞流清涕浊涕前额头痛"></a></td>
+                    <td class="tl">
+                        <dl class="ncc-goods-info">
+                            <dt>
+                                <a href="https://www.baiyangwang.com/item-8027153.html" target="_blank">花城 藿胆丸 36g
+                                    芳香化浊清热通窍用于鼻塞流清涕浊涕前额头痛</a>
+                            </dt>
+                            <dd class="goods-cti">
+                                <span title="100%正品保证"> <img src=""></span>
+                                <span title="30天无忧售后"> <img src=""> </span>
+                                <span title="正品保障"> <img src=""></span>
+                            </dd>
+                        </dl>
+                    </td>
+                    <td>
+                        <em id="item42992_price" class="goods-price">9.00</em>
+                    </td>
+                    <td class="ws0"><a title="减少商品件数" class="add-substract-key tip" data-xx="reduce">-</a>
+                        <input id="input_item_42992" value="1" type="text" class="text tc w20">
+                        <a title="增加商品件数" class="add-substract-key tip " data-xx="add">+</a></td>
+                    <td> <em id="item42992_subtotal" class="goods-subtotal"></em>
+                    </td>
+                    <td class="tl td-border-right"> <a>移入收藏夹</a><br><a>删除</a></td>
+                </tr>
+                <tr>
+                    <td colspan="20"></td>
+                </tr>
+            </tbody>
+            <!-- 
+            <tbody>
+                <tr>
+                    <th colspan="20">
+                        <div class="ncc-store-name">店铺：<a>百洋健康跨境自营店</a></div>
+                        <div class="ncc-store-sale"><span>免运费</span>满59免运费</div>
+                    </th>
+                </tr>
+                <tr id="cart_item_42990" class="shop-list shop-list-42990 ">
+                    <td class="td-border-left "><input type="checkbox" checked="" id="cart_id42990"
+                            class="checkbox mt10"></td>
+                    <td class="w100"><a target="_blank" class="ncc-goods-thumb"><img
+                                src="https://shopncstaticimage.baiyangwang.com/shop/store/goods/2/2_05883322001371635.jpg"></a>
+                    </td>
+                    <td class="tl">
+                        <dl class="ncc-goods-info">
+                            <dt>
+                                <span class="goods-type">海外购</span>
+                                <a>【补气养血】德国Salus绿铁元草本液 500ml 儿童孕妇女补铁补血</a>
+                            </dt>
+                            <dd class="goods-cti">
+                                <span title="100%正品保证"> <img src=""></span>
+                                <span title="7天无忧售后"> <img src=""></span>
+                                <span title="跨境商品"> <img src=""> </span>
+                            </dd>
+                        </dl>
+                    </td>
+                    <td>
+                        <em id="item42990_price" class="goods-price">142.00</em>
+                    </td>
+                    <td class="ws0"><a title="减少商品件数" class="add-substract-key tip" data-xx="reduce">-</a>
+                        <input id="input_item_42990" value="1" type="text" class="text tc w20">
+                        <a title="增加商品件数" class="add-substract-key tip " data-xx="add">+</a></td>
+                    <td> <em id="item42990_subtotal" class="goods-subtotal"></em>
+                    </td>
+                    <td class="tl td-border-right"> <a>移入收藏夹</a><br><a>删除</a></td>
+                </tr>
+
+                <tr>
+                    <td colspan="20"></td>
+                </tr>
+              
+
+
+            </tbody>  -->
+            <!-- 改变总价价格 -->
+            <tfoot>
+                <tr>
+                    <td colspan="20" style="text-align: right;border-top:0;font-size: 14px;font-family: Tahoma;">
+                        商品总价：<em id="goods-total"></em> </td>
+                </tr>
+                <tr>
+                    <td colspan="20">
+                        <div class="ncc-all-account">商品总价（不含运费、税费）<em id="cartTotal"></em>元</div>
+                        <span id="all_submit"><a id="hy_submit" class="ncc-hy-submit ok">海外购结算</a>
+                            <a id="pt_submit" class="ncc-pt-submit ok">普通结算</a></span>
+                        <a id="next_submit" class="ncc-next-submit ok" style="display: none;">确认结算</a>
+                    </td>
+                </tr>
+            </tfoot>
+
+        </table>
+    </form>
+
+    <div id="faq">
+        <div class="wrapper">
+            <div class="foot_25">
+                <div class="foot_logo">
+                    <img src="../html/imges/logo.png">
+                </div>
+                <div class="foot_guanzhu">
+                    <div class="f_p f_pl">关注我们</div>
+                    <div class="foot_g_weibo f_p">
+                        <img src="../html/imges/weibo02.png">
+                        <div class="test_triangle_border popup_weibo">
+                            <div class="popup ">
+                                <span><em></em></span>
+                                <img src="../html/imges/weixin-qr.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foot_g_weixin f_p">
+                        <img src="../html/imges/weixin01.png">
+                        <div class="test_triangle_border popup_weixin">
+                            <div class="popup ">
+                                <span><em></em></span>
+                                <img src="../html/imges/weixin-qr.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="foot_lianxi">
+                <div class="foot_qr">
+                    <div class="foot_buyweixin foot_buy_head">
+                        <p><img src="../html/imges/app-qr.jpg"></p>
+                        <p><span>扫描进入微信商城</span></p>
+                    </div>
+                    <div class="foot_buyshouji foot_buy_head">
+                        <p><img src="../html/imges/weixin-qr.jpg"></p>
+                        <p><span>扫描下载百洋APP</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="wrapper">
+        版权所有 2007-2018 青岛百洋健康药房连锁有限公司 百洋健康 <a target="_blank" href="">鲁ICP备09091598号</a> <a target="_blank"
+            href="">互联网药品信息服务资质证书编号 (鲁)-经营性-2017-0003</a> <a target="_blank" href="">医疗器械经营许可证</a> <a target="_blank"
+            href=""> 二类医疗器械备案凭证</a><br>
+        <p>
+            <a href="#">
+                <img src="../html/imges/jubao.jpg">
+            </a>
+        </p>
+    </div>
+
+    <script>
+        //数量- + 添加点击事件
+        $(".ws0").on("mouseup", "a", function () {
+            let count = $(this).siblings("input").val() * 1;
+            if ($(this).get(0).dataset.xx == "add") {
+                $(this).siblings("input").val(count + 1);
+            } if ($(this).get(0).dataset.xx == "reduce") {
+                $(this).siblings("input").val(count - 1);
+                if ($(this).siblings("input").val() == 0) {
+                    $(this).siblings("input").val(1)
+                };
+            };
+            let totA;
+            let price = $(this).parents(".ws0").prev().children(".goods-price").text();
+            totA = (count * parseFloat(price)).toFixed(2);
+            $(this).parents(".ws0").next().children(".goods-subtotal").text(totA);
+        });
+    </script>
+</body>
+
+</html>

@@ -362,7 +362,7 @@
 }
 
 .head-user-menu dl dt span.ico {
-	background: url(../images/top_bg.png) no-repeat;
+	background: url(../imges/top_bg.png) no-repeat;
 	vertical-align: middle;
 	display: inline-block;
 	width: 20px;
@@ -435,7 +435,7 @@
 }
 
 .head-user-menu a.arrow i {
-	background: url(../images/top_bg.png) no-repeat -150px 0;
+	background: url(../imges/top_bg.png) no-repeat -150px 0;
 	vertical-align: middle;
 	display: inline-block;
 	width: 4px;
@@ -790,7 +790,7 @@
 .public-nav-layout .all-category .title i {
 	font-size: 0px;
 	line-height: 0;
-	background: url(../images/top_bg.png) no-repeat -182px -186px;
+	background: url(../imges/top_bg.png) no-repeat -182px -186px;
 	width: 18px;
 	height: 14px;
 	float: left;
@@ -809,6 +809,7 @@
 
 .public-nav-layout .category .menu {
 	border-top: solid 1px #EF3C79;
+	width: 1000px;
 }
 
 .public-nav-layout .category .menu li {
@@ -897,7 +898,7 @@
 }
 
 .public-nav-layout .category .class .arrow {
-	background: url(../images/top_bg.png) no-repeat -150px -10px;
+	background: url(../imges/top_bg.png) no-repeat -150px -10px;
 	width: 3px;
 	height: 5px;
 	float: right;
@@ -975,7 +976,7 @@
 }
 
 .public-nav-layout .category .sub-class dl dt {
-	background: url(../images/top_bg.png) no-repeat right -25px;
+	background: url(../imges/top_bg.png) no-repeat right -25px;
 	width: 70px;
 	height: 16px;
 	padding-right: 15px;
@@ -1299,7 +1300,7 @@
 	position: absolute;
 	top: 6px;
 	left: 42px;
-	background: url(../images/top-down.png) no-repeat;
+	background: url(../imges/top-down.png) no-repeat;
 	height: 5px;
 	width: 9px;
 	margin: 12px 0px 0px 10px
@@ -1309,11 +1310,13 @@
 	position: absolute;
 	top: 6px;
 	left: 42px;
-	background: url(../images/top-up.png) no-repeat;
+	background: url(../imges/top-up.png) no-repeat;
 	height: 5px;
 	width: 9px;
 	margin: 12px 0px 0px 10px
 }
-
+.current{
+	display: block !important;
+}
 
 

@@ -66,7 +66,7 @@
     left: 12px;
 }
 .public-top .quick-menu dl dt i{
-    /* background: url(../imges/top_bg.png) no-repeat 0 0; */
+    background: url(../imges/top_bg.png) no-repeat 0 0;
     vertical-align: middle;
     display: inline-block;
     width: 6px;
@@ -145,7 +145,7 @@
     position: absolute;
     top: 6px;
     left: 42px;
-    /* background: url(../imges/top_bg.png) no-repeat; */
+    background: url(../imges/top_bg.png) no-repeat;
     height: 5px;
     width: 9px;
     margin: 12px 0px 0px 10px;
@@ -289,7 +289,7 @@
     cursor: pointer;
 }
 .head-user-menu dl dt span.ico {
-    /* background: url(../imges/top_bg.png) no-repeat; */
+    background: url(../imges/top_bg.png) no-repeat;
     vertical-align: middle;
     display: inline-block;
     width: 20px;
@@ -404,7 +404,7 @@
     margin-right: 8px;
 }
 .head-user-menu dl dt span.ico {
-    /* background: url(../imges/top_bg.png) no-repeat; */
+    background: url(../imges/top_bg.png) no-repeat;
     vertical-align: middle;
     display: inline-block;
     width: 20px;
@@ -487,6 +487,7 @@
 }
 .public-nav-layout .wrapper .all-category .category .menu {
     border-top: solid 1px #EF3C79;
+   
 }
 .public-nav-layout .wrapper .all-category .title {
     line-height: 20px;
@@ -496,7 +497,7 @@
 .public-nav-layout .wrapper .all-category .title i {
     font-size: 0px;
     line-height: 0;
-    /* background: url(../imges/top_bg.png) no-repeat -182px -186px; */
+    background: url(../imges/top_bg.png) no-repeat -182px -186px;
     width: 18px;
     height: 14px;
     float: left;

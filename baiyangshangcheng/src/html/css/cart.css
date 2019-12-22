@@ -1,0 +1,904 @@
+@charset "utf-8";
+/* ================================ */
+/* 商城前台购买\购物车等页面相关样式		*/
+/* Author:			Hulihutu		*/
+/* Copyright:		www.shopnc.net	*/
+/* Create Date:		Aug-10-2012		*/
+/* Retrofit Date:	May-25-2015		*/
+/* ================================ */
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.nc-appbar {
+	display: none;
+}
+
+.ws0 {
+	font-size: 0;
+	*word-spacing: -1px/*IE6、7*/;
+}
+.ncc-table-style a.add-substract-key {
+    font: 14px/30px Tahoma, Arial;
+    color: 
+#555;
+text-decoration: none;
+background-color:
+    #F5F5F5;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    width: 26px;
+    height: 30px;
+    margin: 0;
+    cursor: pointer;
+    *display: inline;
+    *zoom: 1;
+}
+#cti {
+	display: none;
+}
+/*表单验证错误提示文字*/
+label.error {
+	font-size: 12px;
+	color: #E84723;
+	margin-left: 8px;
+}
+
+label.error i {
+	margin-right: 4px;
+}
+/* 购物车头部内容
+------------------------------------*/
+.ncc-wrapper {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.ncc-head-layout {
+	display: block;
+	width: 1200px;
+	height: 100px;
+	margin: 0 auto;
+    overflow: hidden;
+    /* border-bottom: 1px solid #ccc; */
+}
+
+.ncc-head-layout .site-logo {
+	float: left;
+	width: 240px;
+	height: 60px;
+	margin: 20px 0;
+}
+
+.ncc-head-layout .site-logo a {
+	display: block;
+}
+
+.ncc-head-layout .site-logo img {
+	max-width: 240px;
+	max-height: 60px;
+}
+.ncc-head-layout .ncc-flow{
+word-spacing: -1em;
+width: 640px;
+height: 70px;
+float: right;
+margin: 15px 0;
+}
+.ncc-head-layout .ncc-flow li{
+    font-size: 12px;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    width: 25%;
+    height: 70px;
+    position: relative;
+    float: left;
+    z-index: 1;
+}
+.ncc-head-layout .ncc-flow li p{
+    text-align: center;
+    width: 100%;
+    height: 24px;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.ncc-head-layout .ncc-flow sub{
+    width: 5px;
+height: 5px;
+margin-left: -3px;
+border: solid 1px
+#CCC;
+border-radius: 4px;
+position: absolute;
+z-index: 2;
+top: 38px;
+left: 50%;
+background-color:
+#ccc;
+
+}
+.ncc-head-layout .ncc-flow .hr{
+    background-color:
+#DDD;
+display: block;
+width: 100%;
+height: 1px;
+border: none 0;
+position: absolute;
+z-index: 1;
+top: 29px;
+left: 0;
+overflow: hidden;
+}
+.ncc-flow li.current p {
+    color: 
+    #EF3C79;
+}
+.ncc-flow li.current .hr{
+    background-color:  #EF3C79;
+}
+.ncc-flow li.current sub{
+    background-color:  #EF3C79;
+}
+.ncc-title {
+    width: 1200px;
+    margin: 0 auto;
+    height: 50px;
+    padding: 15px 0;
+    border: solid #F7F7F7;
+    border-width: 1px 0 0;
+    border-bottom-width: 0px;
+}
+.ncc-title h3 {
+    font: lighter 24px/30px arial,"microsoft yahei";
+    color: 
+    #555;
+}
+.ncc-title h5 {
+    font: 12px/20px arial,"microsoft yahei";
+    color: 
+    #AAA;
+}
+#form_buy{
+    width: 1200px;
+    margin: 0 auto;
+}
+.ncc-table-style {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-spacing: 0;
+}
+.ncc-table-style thead th {
+    line-height: 20px;
+    color: 
+#666;
+background-color:
+    #FAFAFA;
+    text-align: center;
+    height: 20px;
+    padding: 10px;
+}
+.w50 {
+    width: 50px !important;
+}
+.ncc-table-style thead th {
+    line-height: 20px;
+    color: 
+    #666;
+    text-align: center;
+}
+
+
+.ncc-title {
+	height: 50px;
+	padding: 15px 0;
+	border: solid #F7F7F7;
+	border-width: 1px 0 0;
+	border-bottom: solid 1px #F5F5F5;
+}
+
+.ncc-title h3 {
+	font: lighter 24px/30px arial,"microsoft yahei";
+	color: #555;
+}
+
+.ncc-title h5 {
+	font: 12px/20px arial,"microsoft yahei";
+	color: #AAA;
+}
+
+.ncc-title h5 a {
+	color: #EF3C79;
+}
+
+.ncc-table-style {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+
+.ncc-table-style thead th {
+	line-height: 20px;
+	color: #666;
+	background-color: #FAFAFA;
+	text-align: center;
+	height: 20px;
+	padding: 10px;
+}
+
+.ncc-table-style tbody th {
+	font-size: 12px;
+	line-height: 20px;
+	color: #333;
+	height: 20px;
+	background-color: #FFF;
+	padding: 20px 10px 10px;
+}
+
+.ncc-table-style .ncc-store-name {
+	font-size: 14px;
+	line-height: 26px;
+	vertical-align: top;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+.ncc-table-style .ncc-store-sale {
+	font-size: 12px;
+	line-height: 24px;
+	vertical-align: top;
+	display: inline-block;
+	*display: inline;
+	padding-right: 8px;
+	border: dotted 1px #FF875A;
+	margin-left: 20px;
+	position: relative;
+	z-index: 1;
+	*zoom: 1;
+}
+
+.ncc-table-style .ncc-store-sale:hover {
+	z-index: 2;
+}
+
+.ncc-table-style .ncc-store-sale span {
+	color: #FFF;
+	background-color: #FF875A;
+	vertical-align: top;
+	display: inline-block;
+	height: 24px;
+	padding: 0 5px;
+	margin-right: 8px;
+}
+
+.ncc-table-style .ncc-store-sale strong {
+	font-weight: normal;
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.ncc-table-style .ncc-store-sale.ms a {
+	display: none;
+}
+
+.ncc-table-style .ncc-store-sale.ms a.ncc-store-gift {
+	vertical-align: top;
+	display: inline-block !important;
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	margin-left: 4px;
+	border: none;
+}
+
+.ncc-table-style .ncc-store-sale.ms a.ncc-store-gift img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.ncc-table-style .ncc-store-sale .icon-angle-down {
+	font-size: 11px;
+	color: #FF875A;
+	margin: 0 0 0 6px;
+	vertical-align: middle;
+}
+
+.ncc-table-style .ncc-store-sale .combobox {
+	background-color: #FFF;
+	display: none;
+	padding: 9px;
+	border: solid 1px #D7D7D7;
+	position: absolute;
+	z-index: 1;
+	top: 25px;
+	left: -1px;
+	box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+}
+
+.ncc-table-style .ncc-store-sale.ms .combobox {
+	left: 45px;
+}
+
+.ncc-table-style .ncc-store-sale:hover .combobox {
+	display: block;
+}
+
+.ncc-table-style .ncc-store-sale .combobox i {
+	background: url(../images/buy/cart_bg.png) no-repeat -160px 0;
+	display: block;
+	width: 9px;
+	height: 5px;
+	position: absolute;
+	z-index: 2;
+	top: -5px;
+	left: 30px;
+}
+
+.ncc-table-style .ncc-store-sale .combobox-list {
+	white-space: nowrap;
+	padding-bottom: 4px;
+	border-bottom: dotted 1px #E6E6E6;
+	margin-bottom: 4px;
+}
+
+.ncc-table-style .ncc-store-sale .combobox-list:last-child {
+	border: none 0;
+	margin-bottom: 0;
+}
+
+.ncc-table-style .ncc-store-sale .combobox-list .par {
+	font-size: 14px;
+	font-weight: 600;
+	color: #FFF;
+	background: #FFF url(../images/buy/cart_bg.png) no-repeat  -100px 0;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+	*display: inline;
+	width: 40px;
+	height: 20px;
+	padding: 4px 4px 4px 10px;
+	margin-right: 5px;
+	*zoom: 1;
+}
+
+.ncc-table-style .ncc-store-sale .combobox-list .rule {
+	line-height: 18px;
+	background-color: #FFF;
+	vertical-align: middle;
+	display: inline-block;
+	min-width: 200px;
+	height: 36px;
+	text-align: left;
+}
+
+.ncc-table-style .ncc-store-sale .combobox-list .rule p {
+	color: #333;
+}
+
+.ncc-table-style .ncc-store-sale .combobox-list .rule time {
+	color: #AAA;
+	display: block;
+}
+
+.ncc-table-style .ncc-store-sale .combobox-list a {
+	color: #555;
+	line-height: 20px;
+	background-color: #F5F5F5;
+	vertical-align: middle;
+	height: 20px;
+	padding: 4px 10px;
+	margin-left: 6px;
+	border: solid 1px #E6E6E6;
+}
+
+.ncc-table-style .ncc-store-sale .combobox-list a:hover {
+	color: #000;
+	background-color: #FFF;
+	text-decoration: none;
+}
+
+.ncc-table-style .store-sale .ncc-store-gift {
+	vertical-align: middle;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-left: 4px;
+	position: relative;
+	z-index: 1;
+}
+
+.ncc-table-style .store-sale .ncc-store-gift img {
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+}
+
+.ncc-table-style .store-sale .ncc-store-gift:hover {
+	z-index: 2;
+}
+
+.ncc-table-style .store-sale .ncc-store-gift:hover img {
+	display: block;
+	width: 40px;
+	height: 40px;
+	top: -10px;
+	left: -10px;
+	box-shadow: 4px 4px 0 rgba(153,153,153,0.25);
+	transition: ease-in-out 0.25s;
+}
+
+.ncc-table-style tbody tr td {
+	background-color: #FFF;
+	vertical-align: top;
+	padding: 8px 10px;
+	text-align: center;
+	border-top: solid 1px #DDD;
+}
+
+.ncc-table-style tbody .td-border-left {
+	border-left: solid 1px #DDD;
+}
+
+.ncc-table-style tbody .td-border-right {
+	border-right: solid 1px #DDD;
+}
+
+.ncc-table-style tbody .td-bl {
+	background: url(../images/buy/cart_bg.png) no-repeat 0 0;
+}
+
+.ncc-table-style tbody tr.shop-list td {
+	background-color: #FEFEFE;
+}
+
+.ncc-table-style tbody tr.item_disabled td {
+	background: #F9F9F9;
+}
+
+.ncc-table-style tfoot td {
+	
+	text-align: right;
+	height: 40px;
+	padding: 0;
+}
+.ncc-table-style tfoot td:nth-of-type(2){
+	background: #FAFAFA;
+}
+.ncc-table-style i {
+	margin-right: 4px;
+}
+
+.ncc-table-style .ncc-goods-thumb {
+	line-height: 0;
+	background-color: #FFF;
+	text-align: center;
+	vertical-align: middle;
+	display: table-cell;
+	*display: block;
+	width: 80px;
+	height: 80px;
+	border: solid 1px #F5F5F5;
+	overflow: hidden;
+}
+
+.ncc-table-style .ncc-goods-thumb img {
+	max-width: 80px;
+	max-height: 80px;
+}
+
+.ncc-table-style .ncc-goods-info {
+	display: block;
+}
+
+.ncc-table-style .ncc-goods-info dt {
+	line-height: 24px;
+}
+
+.ncc-table-style .ncc-goods-info .goods-spec {
+	line-height: 24px;
+	color: #999;
+}
+
+.ncc-table-style .ncc-goods-info .goods-cti {
+	font-size: 0;
+	line-height: 0;
+	*word-spacing: -1px/*IE6、7*/;
+	margin-bottom: 5px;
+}
+
+.ncc-table-style .ncc-goods-info .goods-cti span {
+	letter-spacing: normal;
+	word-spacing: normal;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin: 2px 4px 2px 0;
+}
+
+.ncc-table-style .ncc-goods-info .goods-cti span img {
+	display: block;
+	width: 16px;
+	height: 16px;
+}
+
+.ncc-table-style .ncc-goods-info .goods-chain {
+	line-height: 20px;
+	color: #000;
+	font-weight: 600;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.ncc-table-style .ncc-goods-info .goods-chain i {
+	color: #f30;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: 600;
+	vertical-align: middle;
+}
+
+.ncc-table-style .ncc-goods-info .goods-chain strong {
+	font-weight: 600;
+	color: #27A9E3;
+	margin: 0 4px;
+}
+
+.ncc-table-style .goods-old-price {
+	font-family: Tahoma;
+	text-decoration: line-through;
+	color: #AAA;
+	line-height: 24px;
+	display: block;
+}
+
+.ncc-table-style .goods-price {
+	font-family: Tahoma;
+	font-weight: 600;
+	color: #333;
+	line-height: 24px;
+	display: block;
+}
+
+.ncc-table-style .goods-subtotal {
+	font-family: Verdana,Tahoma,arial;
+	color: #EF3C79;
+	font-weight: 600;
+	line-height: 24px;
+	display: block;
+}
+
+.ncc-table-style .ncc-goods-sale {
+	display: inline-block;
+	width: 80px;
+	height: 26px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+
+.ncc-table-style .ncc-goods-sale dt {
+	line-height: 24px;
+	color: #F40;
+	background-color: #FFF0E7;
+	text-align: center;
+	width: 80px;
+	height: 24px;
+	border: solid 1px #FFE1D3;
+}
+
+.ncc-table-style .ncc-goods-sale dt i {
+	font-size: 10px;
+	margin: 0 0 0 4px;
+	vertical-align: middle;
+}
+
+.ncc-goods-sale dd {
+	background-color: #FFF;
+	text-align: left;
+	display: none;
+	padding: 9px;
+	border: solid 1px #DDD;
+	position: absolute;
+	z-index: 1;
+	top: 26px;
+	left: 0;
+	box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+}
+
+.ncc-table-style .ncc-goods-sale:hover dd {
+	display: block;
+}
+
+.ncc-table-style .ncc-goods-sale dd p {
+	line-height: 24px;
+	color: #555;
+	white-space: nowrap;
+}
+
+.ncc-table-style .ncc-goods-sale dd p strong {
+	font-size: 600;
+	margin: 0 2px;
+	color: #333;
+}
+
+.ncc-table-style .ncc-goods-sale dd p em {
+	color: #EC4F4A;
+	margin: 0 2px;
+}
+.ncc-table-style tfoot td {
+    background: 
+    #FAFAFA;
+    text-align: right;
+    height: 40px;
+    padding: 0;
+}
+.ncc-all-account {
+    font: normal 12px/40px "microsoft yahei", Arial;
+    color: 
+    #333;
+    vertical-align: top;
+    display: inline-block;
+    height: 40px;
+    margin-right: 10px;
+}
+.ncc-all-account em {
+    font-size: 22px;
+    line-height: 40px;
+    font-family: Tahoma,arial;
+    color: 
+    #EF3C79;
+    margin: 0 4px;
+}
+.ncc-hy-submit {
+    font-size: 20px;
+    line-height: 40px;
+    color: 
+#FFF !important;
+background-color:
+    #EF3C79;
+    vertical-align: top;
+    display: inline-block;
+    height: 40px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+.ncc-pt-submit {
+    font-size: 20px;
+    line-height: 40px;
+    color: 
+#f03c79 !important;
+background-color:
+#fbfdf9;
+border: 1px solid
+    #f03c79;
+    vertical-align: top;
+    display: inline-block;
+    height: 40px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+#faq {
+	background-color: #FFF;
+	width: 100%;
+}
+
+#faq .wrapper {
+	border: solid #EDEDED;
+	border-width: 1px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+#faq .foot_lianxi {
+	width: 25%;
+	padding: 30px 0;
+}
+
+#faq .foot_25 .foot_guanzhu {
+	display: flex;
+	margin-top: 15px;
+}
+
+#faq .foot_25 .foot_guanzhu .f_p {
+	margin-right: 14px;
+	cursor: pointer;
+}
+
+#faq .foot_25 .foot_guanzhu .f_pl {
+	font-size: 14px;
+	margin-left: 20px;
+	line-height: 32px;
+	color: #000;
+}
+
+.test_triangle_border {
+	position: relative;
+	display: none;
+}
+
+.popup {
+	background: #fff;
+	padding: 5px;
+	position: absolute;
+	top: 15px;
+	left: -48px;
+	border: 1px solid #eee;
+}
+
+.test_triangle_border .popup_weixin {
+	left: -44px;
+}
+
+.test_triangle_border .popup span {
+	display: block;
+	width: 0;
+	height: 0;
+	border-width: 0 10px 10px;
+	border-style: solid;
+	border-color: transparent transparent#eee;
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	margin-left: -10px;
+}
+
+.test_triangle_border .popup em {
+	display: block;
+	width: 0;
+	height: 0;
+	border-width: 0 10px 10px;
+	border-style: solid;
+	border-color: transparent transparent #fff;
+	position: absolute;
+	top: 1px;
+	left: -10px;
+}
+
+.test_triangle_border .popup img {
+	display: block;
+	width: 100px;
+	height: 100px;
+}
+
+#faq .foot_g_weibo:hover .popup_weibo {
+	display: block;
+}
+
+#faq .foot_g_weixin:hover .popup_weixin {
+	display: block;
+}
+
+#faq .foot_lianxi .foot_qr {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+
+#faq .foot_lianxi .foot_qr .foot_buy_head p:nth-of-type(1) {
+	margin-top: 8px;
+	border: 1px solid #eee;
+	padding: 5px;
+	width: 96px;
+	height: 96px;
+}
+
+#faq .foot_lianxi .foot_qr .foot_buy_head p {
+	margin-bottom: 9px;
+}
+
+#faq .foot_lianxi .foot_qr .foot_buy_head p span {
+	font-size: 12px;
+	color: #333;
+	font-weight: 600;
+}
+
+#faq ul {
+	width: 55%;
+	font-size: 0;
+	*word-spacing: -1px/*IE6、7*/;
+	white-space: nowrap;
+	padding: 30px 2% 60px 2%;
+}
+
+#faq li {
+	font-size: 12px;
+	vertical-align: top;
+	letter-spacing: normal;
+	word-spacing: normal;
+	display: inline-block;
+	*display: inline/*IE7*/;
+	width: 25%;
+	zoom: 1;
+}
+
+#faq dl {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+}
+
+#faq dl dt {
+	font: 600 16px/20px "microsoft yahei";
+	color: #333;
+	padding: 5px;
+	margin: 5px 0 12px 0;
+}
+
+#faq dl dd {
+	font: 12px/20px "microsoft yahei";
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: block;
+	clear: both;
+	padding: 2px 5px;
+	overflow: hidden;
+	margin-top: 5px;
+}
+
+#faq dl dd i {
+	font-size: 0;
+	line-height: 0;
+	background: url(../images/top_bg.png) no-repeat -80px -10px;
+	vertical-align: middle;
+	display: inline-block;
+	width: 3px;
+	height: 3px;
+	margin-right: 5px;
+}
+
+#faq dl dd a {
+	color: #333;
+}
+
+#faq dl dd a:hover {
+	color: #EF3C79;
+}
+.ncc-null-shopping {
+    width: 480px;
+    height: 340px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.ncc-null-shopping i.ico {
+    background: url(../imges/cart_bg.png) no-repeat -100px -50px;
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    z-index: 1;
+    top: 80px;
+    left: 0;
+}
+.ncc-null-shopping h4 {
+    font: lighter 22px/30px "microsoft yahei";
+    color: 
+    #777;
+    position: absolute;
+    z-index: 1;
+    top: 110px;
+    left: 180px;
+}
+.ncc-null-shopping p {
+    position: absolute;
+    z-index: 1;
+    top: 160px;
+    left: 180px;
+}

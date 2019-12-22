@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情页</title>
+    <link rel="stylesheet" href="../html/css/base.css">
+    <link rel="stylesheet" href="../html/css/home_header.css">
+    <link rel="stylesheet" href="../html/css/detail.css">
+    <script src="../html/js/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <div class="detailHead"></div>
+    <div class="detailBottom"></div>
+    <script>
+
+        $(".detailHead").load("../public/indexHead.html", function () { $.getScript("../html/js/detail.js"); });
+        $(".detailBottom").load("../public/indexBottom.html");
+        $(() => {
+            new Promise(function (resolve, reject) {
+                $.getScript("../html/js/Manager.js", function (script, textStatus, jqXHR) {
+                    resolve();
+                }).then(function () {
+                    $.getScript("../html/js/Cookie.js", function (script, textStatus, jqXHR) {
+                        if (Cookie.get("phone")) {
+                            $(".user-entry").html(`您好，${Cookie.get("phone")}，欢迎来到 <a href="http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html" title="首页" alt="首页" target="_blank">百洋健康</a> <a class='TC'>退出</a></span>`);
+                        }
+                        else if (Cookie.get("username")) {
+                            $(".user-entry").html(`您好，${Cookie.get("username")}，欢迎来到 <a href="http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html" title="首页" alt="首页" target="_blank">百洋健康</a> <a class='TC'>退出</a></span>`);
+                        }
+                        $('.TC').click(function () {
+                            $(".user-entry").html(` 您好，欢迎来到 <a href="http://127.0.0.1/code/baiyangshangcheng/src/static/shouye.html" title="首页" alt="首页" target="_blank">百洋健康</a> <span><a href="http://127.0.0.1/code/baiyangshangcheng/src/html/login.html" target="_blank">登录</a></span> <span><a href="http://127.0.0.1/code/baiyangshangcheng/src/html/registered.html" target="_blank">注册</a></span>`);
+                            Cookie.clear();
+                        })
+                    });
+                });
+            });
+        })
+    </script>
+</body>
+
+</html>
